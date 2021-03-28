@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+     />
     <title>Azad</title>
   </head>
   <body>
@@ -30,9 +34,35 @@
           <button>42</button>
           <button>43</button>
         </div>
-        <button id="001" class="purchase">Purchase</button>
+        <button id="001" class="purchase animate__animated animate__bounce animate__delay-2s
+        animate__repeat-2">Purchase</button>
       </div>
     </div>
+    <section>
+      <h2 data-scroll>hdfhdhchckjxnckj</h2>
+    </section>
+    <section>
+      <h1 data-scroll>Adidbdhbjsas</h1>
+    </section>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script>ScrollOut({
+      onShown(el) {
+        el.classList.add("animate__animated");
+      }
+    });
+    ScrollOut({
+  onShown: function(el) {
+    // remove the class
+    el.classList.remove("animate__animated");
+
+    // force reflow
+    void el.offsetWidth;
+
+    // re-add the animated cl
+    el.classList.add("animate__animated");
+  }
+});
+</script>
     <script src="./app.js"></script>
   </body>
 </html>

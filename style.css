@@ -80,3 +80,22 @@ body {
   border-right: 2.5vh transparent;
   border-left: 2.5vh transparent;
 }
+section{
+  height:100vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+[data-scroll]{
+  transition: all 2s ease-in-out;
+}
+[data-scroll="in"]{
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-scroll="out"]{
+  opacity: 0;
+  transform: translateY(100px);
+}
